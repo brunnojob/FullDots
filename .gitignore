@@ -46,3 +46,9 @@ desktop.ini
 *.swp
 .idea/
 .vscode/
+
+build-native/
+
+runtime-regressions
+
+.netlify/

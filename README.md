@@ -264,3 +264,11 @@ Bug reports, fixes and tests are welcome. Please read [`CONTRIBUTING.md`](CONTRI
 ## License
 
 [MIT](LICENSE). Copyright (c) Atai Barkai. Copyright (c) 2026 asemabdallah (FullDots modifications).
+
+## Implementation update
+
+Origin validation accepts only HTTP(S) origins without credentials, paths, queries or fragments. Loopback equivalence still requires matching schemes and ports. Run the focused regression with `node --experimental-transform-types --test src/server/origins.native.test.ts`.
+
+Credits for this fork's updates: [brunnodev.store](https://brunnodev.store). Original authors retain their respective attribution.
+
+Contribution trailer: `Co-authored-by: nyctophile <33561761+ineedfoundmyway@users.noreply.github.com>`.
