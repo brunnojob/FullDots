@@ -5,3 +5,4 @@
 *.gif binary
 *.mp4 binary
 *.ico binary
+.proof/** -linguist-detectable
