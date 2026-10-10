@@ -1,0 +1,86 @@
+{
+  "repository": "brunnojob/FullDots",
+  "inputs": [
+    ".proof/scenarios.json"
+  ],
+  "cases": [
+    {
+      "name": "npm ci",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm ci"
+      ],
+      "timeout": 900,
+      "display": false
+    },
+    {
+      "name": "npm run check-format",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run check-format"
+      ],
+      "timeout": 900,
+      "display": true
+    },
+    {
+      "name": "npm run lint",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run lint"
+      ],
+      "timeout": 900,
+      "display": true
+    },
+    {
+      "name": "npm run typecheck",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run typecheck"
+      ],
+      "timeout": 900,
+      "display": true
+    },
+    {
+      "name": "npm test",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm test"
+      ],
+      "timeout": 900,
+      "display": true
+    },
+    {
+      "name": "npm run build",
+      "argv": [
+        "bash",
+        "-e",
+        "-o",
+        "pipefail",
+        "-c",
+        "npm run build"
+      ],
+      "timeout": 900,
+      "display": true
+    }
+  ]
+}
