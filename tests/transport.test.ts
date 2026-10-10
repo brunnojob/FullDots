@@ -2,8 +2,6 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { createServer, type Server } from 'node:http';
 import type { AddressInfo } from 'node:net';
 import { readResource } from '../src/browser/transport.js';
-// Only DNS validation is replaced: all requests below use real Node HTTP sockets
-// to a controlled loopback fixture while retaining the public URL's Host header.
 vi.mock('../src/browser/security.js', () => ({
   validateUrl: async (input: string) => ({
     url: new URL(input),

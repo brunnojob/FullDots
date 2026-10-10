@@ -1,6 +1,6 @@
-import test from 'node:test';
+import { test } from 'vitest';
 import assert from 'node:assert/strict';
-import { originAllowed } from './origins.ts';
+import { originAllowed } from './origins.js';
 
 test('only HTTP origins participate in exact or loopback equivalence', () => {
   assert.equal(

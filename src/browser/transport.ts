@@ -1,8 +1,6 @@
 import http from 'node:http';
 import https from 'node:https';
 import { validateUrl } from './security.js';
-// Browser networking is intercepted: each request is DNS-pinned to a validated
-// public IP. Redirects are rejected before Playwright sees the Location header.
 export async function readResource(
   input: string,
   signal?: AbortSignal,
@@ -14,6 +12,7 @@ export async function readResource(
       url,
       {
         method: 'GET',
+        agent: false,
         signal,
         headers: {
           'User-Agent': 'FullDots/0.1 (read-only research)',
